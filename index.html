@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#24173b">
+<meta name="description" content="Интерактивная открытка Евочке к первому классу">
+<title>Евочка, с первым классом! ❤️</title>
+<link rel="stylesheet" href="styles1.css">
+<link rel="stylesheet" href="styles2.css">
+</head>
+<body class="locked">
+<div class="progress"><span id="progress"></span></div>
+<header class="utility" aria-label="Управление открыткой">
+  <button class="pill" id="sound" type="button" aria-pressed="false" aria-label="Выключить музыку"><span class="bars"><i></i><i></i><i></i></span><span class="label">Музыка</span></button>
+  <button class="pill" id="magicTop" type="button" aria-label="Добавить немного волшебства">✨</button>
+</header>
+
+<div class="opening" id="opening" role="dialog" aria-modal="true" aria-labelledby="openingTitle">
+  <div class="sky" aria-hidden="true"><span class="float-star">✦</span><span class="float-star">✧</span><span class="float-star">★</span><span class="float-star">✦</span><span class="float-star">✧</span></div>
+  <div class="opening-card">
+    <div class="opening-badge" aria-hidden="true">
+      <svg viewBox="0 0 100 100">
+        <rect x="24" y="30" width="52" height="58" rx="18" fill="#8f6ad8"/>
+        <path d="M36 30c1-15 27-15 28 0" fill="none" stroke="#6d4fb0" stroke-width="8" stroke-linecap="round"/>
+        <rect x="31" y="57" width="38" height="22" rx="9" fill="#cdb9f4"/>
+        <path d="M50 43c6-9 17-2 13 6-4 7-13 12-13 12s-9-5-13-12c-4-8 7-15 13-6z" fill="#ff93b8"/>
+      </svg>
+    </div>
+    <p style="margin:0 0 14px;color:#e9dfff;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase">Для одной замечательной первоклассницы</p>
+    <h1 id="openingTitle">Евочка, у меня для тебя кое-что есть ❤️</h1>
+    <p>Открывай не спеша. Здесь спрятан целый маленький школьный мир — и он весь только для тебя.</p>
+    <button class="btn" id="openCard" type="button">Открыть открытку <span>→</span></button>
+  </div>
+  <div class="note">После открытия заиграет тихая музыка. Её всегда можно выключить кнопкой справа сверху.</div>
+</div>
+
+<main>
+<section class="scene hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"><span class="hero-blob a"></span><span class="hero-blob b"></span><span class="hero-blob c"></span></div>
+  <div class="spark-layer" id="heroSpark"></div>
+  <div class="inner hero-content">
+    <p class="eyebrow reveal">1 сентября • начинается новая история</p>
+    <h2 class="hero-title reveal d1">Евочка,<br><em>ты <span class="mobile-break"><br></span>первоклассница!</em></h2>
+    <p class="hero-lead reveal d2">Сегодня тот самый день, когда за плечами появляется рюкзак, в руках — цветы, а впереди открывается огромный мир.</p>
+    <div class="school-still reveal d2" aria-label="Кликабельные школьные предметы">
+      <button class="hero-flower f1" type="button" data-hero-msg="Цветы — для самого первого школьного дня 🌸">🌷</button>
+      <button class="hero-pencil p1" type="button" data-hero-msg="Пусть в тетрадках будет много красивых строчек ✏️">✏️</button>
+      <button class="backpack-mini" id="heroPack" type="button" aria-label="Нажать на рюкзак"><span class="heart">💗</span><span class="pocket"></span></button>
+      <button class="hero-pencil p2" type="button" data-hero-msg="А сложные задачки пусть обязательно становятся понятными 📚">📏</button>
+      <button class="hero-flower f2" type="button" data-hero-msg="И пусть каждый день находится повод улыбнуться 🌼">🌼</button>
+    </div>
+    <button class="scroll reveal d3" data-scroll="#pack" type="button"><span>Идём дальше</span><span>↓</span></button>
+  </div>
+</section>
+
+<section class="scene pack" id="pack">
+  <div class="inner pack-grid">
+    <div class="pack-copy">
+      <p class="eyebrow reveal">Что я положил в твой рюкзачок</p>
+      <h2 class="title reveal d1">Три вещи, которые пригодятся в школе сильнее всего.</h2>
+      <p class="copy reveal d2">У рюкзачка есть три кармашка. Открой каждый — внутри не учебники, а кое-что гораздо важнее.</p>
+      <div class="pack-note reveal d2" id="packNote"><p>Выбери любой кармашек. Начинать можно с какого угодно.</p></div>
+    </div>
+    <div class="bigpack reveal d1">
+      <span class="shine"></span><span class="tag">Евочка</span>
+      <button class="pocket-btn two" data-pack="curiosity" type="button"><span>Кармашек 1</span></button>
+      <button class="pocket-btn three" data-pack="kindness" type="button"><span>Кармашек 2</span></button>
+      <button class="pocket-btn one" data-pack="courage" type="button"><span>Самый большой кармашек</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="scene path" id="path">
+  <div class="inner">
+    <p class="eyebrow reveal">Твоя новая большая дорога</p>
+    <h2 class="title reveal d1">В школе тебя ждёт целый мир открытий.</h2>
+    <p class="copy reveal d2">Нажимай на остановки школьной дорожки — и смотри, сколько всего интересного впереди.</p>
+    <div class="path-wrap reveal d2">
+      <div class="road"></div><div class="path-pin">🏫</div>
+      <button class="path-card c1" data-path="Книги" type="button"><b>📖 Читать</b><span>Настоящие большие книги и целые новые миры.</span></button>
+      <button class="path-card c2" data-path="Письмо" type="button"><b>✍️ Писать</b><span>Красивые строчки, слова и свои первые тексты.</span></button>
+      <button class="path-card c3" data-path="Задачки" type="button"><b>🧩 Решать</b><span>Задачи, загадки и вопросы, у которых обязательно найдётся ответ.</span></button>
+      <button class="path-card c4" data-path="Друзья" type="button"><b>🤝 Дружить</b><span>Разговоры на переменах, смешные истории и люди, которых будешь помнить.</span></button>
+      <button class="path-card c5" data-path="Мечты" type="button"><b>🌟 Мечтать</b><span>Потому что большие достижения очень часто начинаются с маленькой детской мечты.</span></button>
+      <div class="path-message" id="pathMessage">Шаг за шагом — и впереди огромное интересное путешествие.</div>
+    </div>
+  </div>
+</section>
+
+<section class="scene bouquet" id="bouquet">
+  <div class="inner bouquet-grid">
+    <div class="bouquet-copy">
+      <p class="eyebrow reveal">Букет пожеланий для Евочки</p>
+      <h2 class="title reveal d1">У каждого цветка здесь есть своё пожелание.</h2>
+      <p class="copy reveal d2">Коснись любого цветка. Когда откроешь все шесть — букет соберётся полностью.</p>
+      <div class="wishbox reveal d2"><small id="wishCounter">0 / 6 цветков открыто</small><p id="wishText">Первый цветок уже ждёт тебя 🌸</p></div>
+    </div>
+    <div class="flowers reveal d1" id="flowers">
+      <span class="stem s1"></span><span class="stem s2"></span><span class="stem s3"></span><span class="stem s4"></span><span class="stem s5"></span><span class="stem s6"></span>
+      <button class="flower f1" data-wish="0" type="button">🌷</button><button class="flower f2" data-wish="1" type="button">🌸</button><button class="flower f3" data-wish="2" type="button">🌼</button><button class="flower f4" data-wish="3" type="button">🌺</button><button class="flower f5" data-wish="4" type="button">🌻</button><button class="flower f6" data-wish="5" type="button">🪻</button>
+      <button class="bow" id="bow" type="button" aria-label="Бантик">🎀</button>
+    </div>
+  </div>
+</section>
+
+<section class="scene letter" id="letter">
+  <div class="inner">
+    <div class="letter-intro" id="letterIntro">
+      <p class="eyebrow reveal">А теперь — самое главное</p>
+      <h2 class="title reveal d1">Большое письмо моей Евочке.</h2>
+      <p class="copy reveal d2">То самое поздравление — полностью, без сокращений. Я разделил его на небольшие страницы, чтобы читать было удобно и спокойно.</p>
+      <button class="envelope reveal d2" id="envelope" type="button" aria-label="Открыть письмо"><span class="env-back"></span><span class="env-paper"><i>Евочке ❤️</i></span><span class="env-front"></span><span class="env-flap"></span><span class="seal">Е</span></button>
+      <button class="btn light reveal d3" id="openLetter" type="button">Открыть письмо <span>→</span></button>
+    </div>
+    <div class="reader" id="reader" aria-hidden="true">
+      <div class="reader-top"><span>Для Евочки</span><span id="pageCount">1 / 1</span></div>
+      <div class="paper" id="paper"><article class="letter-page" id="letterPage" aria-live="polite"></article></div>
+      <div class="reader-controls"><button class="round" id="prev" type="button" aria-label="Предыдущая страница">←</button><div class="page-progress"><span id="pageProgress"></span></div><button class="round" id="next" type="button" aria-label="Следующая страница">→</button></div>
+      <p class="swipe">На телефоне страницы можно листать пальцем</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene finale" id="finale">
+  <div class="final-sky" aria-hidden="true"><span class="final-star">✦</span><span class="final-star">★</span><span class="final-star">✧</span><span class="final-star">✦</span><span class="final-star">★</span></div>
+  <div class="spark-layer" id="finalSpark"></div>
+  <div class="inner final-content">
+    <button class="magic-medal reveal" id="medal" type="button" aria-label="Нажать на медаль"><span>🎒</span></button>
+    <p class="eyebrow reveal">Твоя школьная история начинается сегодня</p>
+    <h2 class="final-title reveal d1">С первым классом,<br>Евочка! ❤️</h2>
+    <p class="final-sub reveal d2">Пусть впереди будет много счастливых дней, добрых людей, интересных открытий и красивых воспоминаний.</p>
+    <p class="final-heart reveal d2">Я очень горжусь тобой.</p>
+    <button class="magic-btn reveal d3" id="magic" type="button">Нажать и запустить школьное волшебство ✨</button>
+    <div class="final-secret" id="finalSecret">Пусть этот первый школьный день станет началом очень счастливой истории.</div>
+  </div>
+</section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
